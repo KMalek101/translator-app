@@ -27,7 +27,8 @@ function Page(){
     const [copyClassTranslated, setCopyClassTranslated] = useState("p-clipboard")
     const [emptyCase, setEmptyCase] = useState("p-empty")
     const [emptyCaseTranslated, setEmptyCaseTranslated] = useState("p-empty")
-
+    const [translatedTextTemp, setTranslatedTextTemp] = useState(translatedText)
+    
     useEffect(()=>{
         const newarray = [...langWord]
         newarray[0] += ' active'
@@ -70,9 +71,12 @@ function Page(){
         if(!checkClassesTranslated){
             setClassScrollTranslated("scroll-translated");
             setCheckClassesTranslated(!checkClassesTranslated);
+            setTranslatedTextTemp(translatedText)
+            setTranslatedText("")
         }else{
             setClassScrollTranslated("empty");
             setCheckClassesTranslated(!checkClassesTranslated);
+            setTranslatedText(translatedTextTemp);
         }
     }
 
@@ -86,11 +90,15 @@ function Page(){
         const newarray = new Array(numOfDivs).fill("lang-word");
         newarray[0] = newarray[t] = ("lang-word active")
         setLangWord(newarray);
+        setClassScroll("empty");
+        setClassTextArea("myTextArea");
+        setCheckClasses(!checkClasses);
     }
 
     function changePlaceTranslated(i){
         const uplanguages = [...languagesTranslated]
         const temp = uplanguages.splice(i, 1);
+        const temp2 = translatedText;
         uplanguages.unshift(temp[0]);
         setLanguagesTranslated(uplanguages);
         setTargetLanguage(uplanguages[0].iso)
@@ -98,6 +106,9 @@ function Page(){
         const newarray = new Array(numOfDivs).fill("lang-word");
         newarray[3] = newarray[t] = ("lang-word active")
         setLangWord(newarray);
+        setClassScrollTranslated("empty");
+        setCheckClassesTranslated(!checkClassesTranslated)
+        setTranslatedText(translatedTextTemp);
     }
     
     const reverseLanguages = () =>{
