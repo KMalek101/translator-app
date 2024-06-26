@@ -365,7 +365,7 @@ function Page(){
                             </svg>
                         </div>
                         <div className={copyClassTranslated}>Coppied to ClipBoard</div>
-                        <div className={emptyCaseTranslated}>There is no text</div>
+                        <div className={emptyCaseTranslated}>There is no text.</div>
                     </div>
                     
                 </div>
