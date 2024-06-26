@@ -206,6 +206,14 @@ function Page(){
         if(clicked){
             if(sourceLanguage === targetLanguage){
                 alert("source language and target language must be diffrent to continue")
+                setClicked(false);
+                return
+            }
+            if(!translateText){
+                alert("You'll need to enter a textx to continue");
+                setTranslateText("");
+                setClicked(false);
+                return
             }
         try {    
             const res = await Axios.get(`https://api.mymemory.translated.net/get?q=${translateText}&langpair=${sourceLanguage}|${targetLanguage}`)
@@ -219,7 +227,7 @@ function Page(){
     
         useEffect( () => {
             fetchCard();
-        });
+        }, [clicked]);
 
     useEffect(() => {
         if (translateText.length <= MaxLength) {
