@@ -372,7 +372,7 @@ function Page(){
             </div>
         </div>
         <a className="a" href="mailto:kaoucheaneslive@gmail.com">Send Feedback</a>
-        <a className="rep" href="https://github.com/KMalek101/Malek-s-Translator/tree/master">Repository</a>
+        <a className="rep" href="https://github.com/KMalek101/translator-app">Repository</a>
     </>
 }
 export default Page
