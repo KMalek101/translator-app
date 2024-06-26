@@ -298,8 +298,8 @@ function Page(){
                                 <rect className="hover-copy-translate" x="8.33334" y="8.33334" width="8.33333" height="8.33333" rx="2" stroke="#4D5562" stroke-width="2"/>
                             </svg>
                         </div>
-                        <div className={copyClassTranslate}>Text coppied to clipBoard</div>
-                        <div className={emptyCase}>There is no text please click translate then try again</div>
+                        <div className={copyClassTranslate}>Coppied to ClipBoard</div>
+                        <div className={emptyCase}>There is no text</div>
                         <button onClick={()=> setClicked(true)}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 20H18" stroke="#F9FAFB" stroke-width="2"/>
@@ -365,7 +365,7 @@ function Page(){
                             </svg>
                         </div>
                         <div className={copyClassTranslated}>Coppied to ClipBoard</div>
-                        <div className={emptyCaseTranslated}>There is no text.</div>
+                        <div className={emptyCaseTranslated}>There is no text</div>
                     </div>
                     
                 </div>
