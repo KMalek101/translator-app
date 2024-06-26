@@ -236,7 +236,7 @@ function Page(){
     return<>
     
         <div className="background-container">
-            <img src="src/assets/hero_img.jpg" alt="backgroundIMG"></img>
+            <img src="./hero_img.jpg" alt="backgroundIMG"></img>
             <div className="background-color"></div>
         </div>
 
