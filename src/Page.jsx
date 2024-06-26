@@ -364,8 +364,8 @@ function Page(){
                                 <rect className="hover-copy-translated" x="8.33334" y="8.33334" width="8.33333" height="8.33333" rx="2" stroke="#4D5562" stroke-width="2"/>
                             </svg>
                         </div>
-                        <div className={copyClassTranslated}>Text coppied to clipBoard</div>
-                        <div className={emptyCaseTranslated}>There is no text please click translate then try again</div>
+                        <div className={copyClassTranslated}>Coppied to ClipBoard</div>
+                        <div className={emptyCaseTranslated}>There is no text</div>
                     </div>
                     
                 </div>
